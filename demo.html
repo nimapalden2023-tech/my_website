@@ -1,0 +1,103 @@
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo Dashboard</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0 auto; padding:10px; max-width:1200px; }
+header { border-bottom:2px solid #ccc; margin-bottom:20px; }
+nav a { margin-right:10px; text-decoration:none; color:#0077cc; }
+section { margin-bottom:30px; padding:10px; }
+input[type=text], input[type=number], input[type=date] { width:100%; box-sizing:border-box; margin-bottom:10px; }
+button { margin-top:10px; }
+img, video { max-width:100%; height:auto; margin:5px; }
+/* Responsive Design */
+@media (max-width:600px){
+nav a { display:block; margin-bottom:5px; }
+h1 { font-size:1.5em; }
+h2 { font-size:1.2em; }
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>My Demo Dashboard</h1>
+  <nav>
+    <a href="#">Home</a> |
+    <a href="#">Try Yourself</a> |
+    <a href="#">Stats</a>
+  </nav>
+</header>
+
+<main>
+  <section id="about">
+  <h2>About Me</h2>
+  <p>Hi! I'm Nima Pelden. I love coding, maths, dancing and spending time with my family.</p>
+  <div class="about-images">
+    <img src="../images/mypic.png" alt="Nima Pelden">
+  </div>
+</section>
+
+
+  <section id="favorites">
+    <h2>Favorites</h2>
+    <p>My favorite things: Ice Cream, Lafing, Yogurt, Flowers, Spideman, Fruits, Green tea, plushies, pink.</p>
+  </section>
+
+  <section id="todo">
+    <h2>To-Do List</h2>
+    <input type="text" id="new-task" placeholder="Enter a task">
+    <button id="add-task-btn">Add Task</button>
+    <ul id="todo-list"></ul>
+    <p>Progress: <span id="todo-progress">0%</span></p>
+  </section>
+
+  <section id="period-tracker">
+    <h2>Period Tracker</h2>
+    <label>Last Period Start Date: <input type="date" id="last-period" value="2025-11-01"></label>
+    <label>Cycle Length (days): <input type="number" id="cycle-length" value="28"></label>
+    <button id="calculate-period">Calculate Next Period</button>
+    <p id="next-period"></p>
+  </section>
+
+  <section id="hydration">
+    <h2>Hydration Tracker</h2>
+    <label>Water Intake (ml): <input type="number" id="water-intake"></label>
+    <button id="add-water">Add</button>
+    <p>Daily Intake: <span id="water-daily">0</span> ml</p>
+  </section>
+
+  <section id="mood">
+    <h2>Mood Tracker</h2>
+    <label>Today's Mood (1-5): <input type="number" min="1" max="5" id="mood-score"></label>
+    <button id="add-mood">Add Mood</button>
+    <p>Mood History: <span id="mood-history"></span></p>
+  </section>
+
+  <section id="gallery">
+    <h2>Images & Videos</h2>
+    <img src="images/demo1.jpg" alt="Demo Image">
+    <video controls>
+      <source src="videos/demo1.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section id="links">
+    <h2>Links</h2>
+    <a href="https://github.com" target="_blank">GitHub</a>
+  </section>
+
+  <section id="chart">
+    <h2>Dashboard Chart</h2>
+    <canvas id="dashboard-chart"></canvas>
+  </section>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
+
